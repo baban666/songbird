@@ -8,6 +8,7 @@ import Description from "../description";
 import Question from "../question";
 import NextButton from "../next-button";
 
+
 const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
@@ -26,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-export default function Main({steps, activeStep, handleReset, handleSkip, handleBack, handleNext, isStepOptional}) {
+export default function Main({steps, activeStep, handleReset, handleNext, question, checkAnswer, gameData, desc, errors, disabledItems, disabledNext}) {
     const classes = useStyles();
 
     return (
@@ -34,17 +35,17 @@ export default function Main({steps, activeStep, handleReset, handleSkip, handle
             <Container m={300}>
                 <Grid item xs={12}>
                     <Paper className={classes.topPaper}>
-                        <Question />
+                        <Question question={question} />
                     </Paper>
                 </Grid>
                 <Grid container spacing={5}>
                     <Grid item xs={6}>
                         <Paper className={classes.paper}>
-                            <Answers />
+                            <Answers question={question} checkAnswer={checkAnswer} gameData={gameData} errors={errors} disabledItems={disabledItems}/>
                         </Paper>
                     </Grid>
                     <Grid item xs={6}>
-                         <Description />
+                         <Description desc={desc} />
                     </Grid>
                     <Grid item xs={12}>
                         <Paper className={classes.paper}>
@@ -53,6 +54,7 @@ export default function Main({steps, activeStep, handleReset, handleSkip, handle
                                  activeStep={activeStep}
                                  handleReset={handleReset}
                                  handleNext={handleNext}
+                                 disabledNext={disabledNext}
                              />
                         </Paper>
                     </Grid>

@@ -14,82 +14,45 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-export default function SelectedListItem() {
+export default function SelectedListItem({gameData, question, checkAnswer, errors, disabledItems}) {
     const classes = useStyles();
-    const [selectedIndex, setSelectedIndex] = React.useState(1);
+    const [selectedIndex, setSelectedIndex] = React.useState(null);
 
     const handleListItemClick = (event, index) => {
+        const {id} = question
+        checkAnswer(id, index)
         setSelectedIndex(index);
     };
+
+    const isError = (errors, index) => {
+        return errors[index]
+    };
+    const isDisabled = (items, index) => {
+        return items[index]
+    };
+
 
     return (
         <div className={classes.root}>
             <List component="nav" aria-label="main mailbox folders">
-                <ListItem
-                    button
-                    selected={selectedIndex === 0}
-                    onClick={(event) => handleListItemClick(event, 0)}
-                >
-                    <ListItemIcon>
-                        <FiberManualRecordIcon />
-                    </ListItemIcon>
-                    <ListItemText primary="Inbox" />
-                </ListItem>
-                <Divider />
-                <ListItem
-                    button
-                    selected={selectedIndex === 1}
-                    onClick={(event) => handleListItemClick(event, 1)}
-                >
-                    <ListItemIcon>
-                        <FiberManualRecordIcon />
-                    </ListItemIcon>
-                    <ListItemText primary="Drafts" />
-                </ListItem>
-                <Divider />
-                <ListItem
-                    button
-                    selected={selectedIndex === 2}
-                    onClick={(event) => handleListItemClick(event, 2)}
-                >
-                    <ListItemIcon>
-                        <FiberManualRecordIcon />
-                    </ListItemIcon>
-                    <ListItemText primary="Inbox" />
-                </ListItem>
-                <Divider />
-                <ListItem
-                    button
-                    selected={selectedIndex === 3}
-                    onClick={(event) => handleListItemClick(event, 3)}
-                >
-                    <ListItemIcon>
-                        <FiberManualRecordIcon />
-                    </ListItemIcon>
-                    <ListItemText primary="Drafts" />
-                </ListItem>
-                <Divider />
-                <ListItem
-                    button
-                    selected={selectedIndex === 4}
-                    onClick={(event) => handleListItemClick(event, 4)}
-                >
-                    <ListItemIcon>
-                        <FiberManualRecordIcon />
-                    </ListItemIcon>
-                    <ListItemText primary="Drafts" />
-                </ListItem>
-                <Divider />
-                <ListItem
-                    button
-                    selected={selectedIndex === 5}
-                    onClick={(event) => handleListItemClick(event, 5)}
-                >
-                    <ListItemIcon>
-                        <FiberManualRecordIcon />
-                    </ListItemIcon>
-                    <ListItemText primary="Drafts" />
-                </ListItem>
+                {gameData.map((item) => {
+                    return (
+                        <div key={item.id}>
+                        <ListItem
+                            button
+                            selected={selectedIndex === item.id}
+                            disabled={isDisabled(disabledItems, item.id)}
+                            onClick={(event) => handleListItemClick(event, item.id)}
+                        >
+                            <ListItemIcon>
+                                <FiberManualRecordIcon color={isError(errors, item.id)} />
+                            </ListItemIcon>
+                            <ListItemText primary={item.name} />
+                        </ListItem>
+                        <Divider />
+                        </div>
+                    )
+                })}
             </List>
         </div>
     );

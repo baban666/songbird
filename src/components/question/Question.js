@@ -22,7 +22,8 @@ const useStyles = makeStyles((theme) => ({
         flex: '1 0 auto',
     },
     cover: {
-        width: 151,
+        width: 300,
+        height: 150,
     },
     controls: {
         display: 'flex',
@@ -32,26 +33,28 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-export default function Question() {
+export default function Question({question}) {
     const classes = useStyles();
+    const {image, audio, name} = question
     return (
         <Container>
             <Card className={classes.root}>
             <CardMedia
                 className={classes.cover}
-                image="https://material-ui.com/static/images/cards/live-from-space.jpg"
+                image={process.env.PUBLIC_URL + `/game-data/img/${image}`}
                 title="Live from space album cover"
             />
             <div className={classes.details}>
                 <CardContent className={classes.content}>
                     <Typography component="h5" variant="h5" align="left">
-                        Live From Space
+                        {name}
                     </Typography>
                 </CardContent>
                 <div className={classes.controls}>
                         <AudioPlayer
-                             src="https://birds-quiz.netlify.app/static/media/win.a1e9e8b6.mp3"
+                             src={process.env.PUBLIC_URL + `/game-data/audio/${audio}`}
                              showJumpControls={false}
+                             autoPlayAfterSrcChange={false}
                              layout="horizontal"
                              customAdditionalControls={[]}
                              onPlay={e => console.log("onPlay")}

@@ -18,33 +18,31 @@ const useStyles = makeStyles({
     },
 });
 
-export default function Description() {
+export default function Description({desc}) {
     const classes = useStyles();
-
+    const {name, species, description, image, audio} = desc
     return (
         <Card className={classes.root}>
             <CardActionArea>
                 <CardMedia
                     className={classes.media}
-                    image="https://material-ui.com/static/images/cards/contemplative-reptile.jpg"
+                    image={process.env.PUBLIC_URL + `/game-data/img/${image}`}
                     title="Contemplative Reptile"
                 />
                 <CardContent>
                     <Typography gutterBottom variant="h4" component="h2">
-                        Lizard (across all)
+                        {name}
                     </Typography>
                     <Typography variant="body2" color="textSecondary" component="p">
-                        Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                        across all continents except Antarctica
-                        across all continents except Antarctica
-                        across all continents except Antarctica
+                        {description}
                     </Typography>
                 </CardContent>
             </CardActionArea>
             <CardActions>
                 <AudioPlayer
-                    src="https://birds-quiz.netlify.app/static/media/win.a1e9e8b6.mp3"
+                    src={process.env.PUBLIC_URL + `/game-data/audio/${audio}`}
                     showJumpControls={false}
+                    autoPlayAfterSrcChange={false}
                     layout="horizontal"
                     customAdditionalControls={[]}
                     onPlay={e => console.log("onPlay")}

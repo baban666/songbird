@@ -29,7 +29,7 @@ function getStepContent(step) {
     }
 }
 
-export default function NextButton({steps, activeStep, handleReset, handleNext, isStepOptional}) {
+export default function NextButton({steps, activeStep, handleReset, handleNext, disabledNext}) {
     const classes = useStyles();
     return (
         <div className={classes.root}>
@@ -52,6 +52,7 @@ export default function NextButton({steps, activeStep, handleReset, handleNext, 
                                 color="primary"
                                 onClick={handleNext}
                                 className={classes.button}
+                                disabled={disabledNext}
                             >
                                 {activeStep === steps.length - 1 ? 'Finish' : 'Next'}
                             </Button>

@@ -36,7 +36,7 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-export default function Header() {
+export default function Header({totalPoints}) {
     const classes = useStyles();
 
     return (
@@ -50,7 +50,7 @@ export default function Header() {
                         <div className={classes.grow} />
                         <div className={classes.sectionDesktop}>
                             <IconButton aria-label="show point of game" color="inherit">
-                                <Badge badgeContent={14} color="secondary">
+                                <Badge badgeContent={totalPoints.toString()} color="secondary">
                                     <EmojiEventsIcon />
                                 </Badge>
                             </IconButton>
