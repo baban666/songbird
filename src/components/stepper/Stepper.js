@@ -3,8 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Stepper from '@material-ui/core/Stepper';
 import Step from '@material-ui/core/Step';
 import StepLabel from '@material-ui/core/StepLabel';
-import Typography from '@material-ui/core/Typography';
-
+import Typography from "@material-ui/core/Typography";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -19,30 +18,28 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-function getSteps() {
-    return ['Разминка',
-            'Воробьиные',
-            'Лесные птицы',
-            'Певчие птицы',
-            'Хищные птицы',
-            'Морские птицы'];
-}
 
-export default function CustomizedSteppers() {
+export default function StepsAnswer({steps, isStepFailed, activeStep}) {
     const classes = useStyles();
-    const steps = getSteps();
 
     return (
         <div className={classes.root}>
-            <Typography className={classes.instructions}>
-                Разновидности птиц
+            <Typography variant="h3" gutterBottom>
+                Угадайте гимн страны по мелодии
             </Typography>
-            <Stepper alternativeLabel>
-                {steps.map((label) => (
-                    <Step key={label}>
-                        <StepLabel>{label}</StepLabel>
-                    </Step>
-                ))}
+            <Stepper alternativeLabel activeStep={activeStep}>
+                {steps.map((label, index) => {
+                    const stepProps = {};
+                    const labelProps = {};
+                    if (isStepFailed(index)) {
+                        labelProps.error = true;
+                    }
+                    return (
+                        <Step key={label} {...stepProps}>
+                            <StepLabel {...labelProps}>{label}</StepLabel>
+                        </Step>
+                    );
+                })}
             </Stepper>
         </div>
     );

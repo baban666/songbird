@@ -26,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-export default function Main() {
+export default function Main({steps, activeStep, handleReset, handleSkip, handleBack, handleNext, isStepOptional}) {
     const classes = useStyles();
 
     return (
@@ -48,7 +48,12 @@ export default function Main() {
                     </Grid>
                     <Grid item xs={12}>
                         <Paper className={classes.paper}>
-                            <NextButton/>
+                             <NextButton
+                                 steps={steps}
+                                 activeStep={activeStep}
+                                 handleReset={handleReset}
+                                 handleNext={handleNext}
+                             />
                         </Paper>
                     </Grid>
                 </Grid>

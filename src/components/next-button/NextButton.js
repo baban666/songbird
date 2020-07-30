@@ -16,15 +16,6 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-function getSteps() {
-    return ['Разминка',
-        'Воробьиные',
-        'Лесные птицы',
-        'Певчие птицы',
-        'Хищные птицы',
-        'Морские птицы'];
-}
-
 function getStepContent(step) {
     switch (step) {
         case 0:
@@ -38,29 +29,24 @@ function getStepContent(step) {
     }
 }
 
-export default function NextButton() {
+export default function NextButton({steps, activeStep, handleReset, handleNext, isStepOptional}) {
     const classes = useStyles();
-    const [activeStep, setActiveStep] = React.useState(0);
-    const steps = getSteps();
-
-    const handleNext = () => {
-        setActiveStep((prevActiveStep) => prevActiveStep + 1);
-    };
-
-    const handleReset = () => {
-        setActiveStep(0);
-    };
-
     return (
         <div className={classes.root}>
             <div>
-                {(
+                {activeStep === steps.length ? (
+                    <div>
+                        <Typography className={classes.instructions}>
+                            All steps completed - you&apos;re finished
+                        </Typography>
+                        <Button onClick={handleReset} className={classes.button}>
+                            Reset
+                        </Button>
+                    </div>
+                ) : (
                     <div>
                         <Typography className={classes.instructions}>{getStepContent(activeStep)}</Typography>
                         <div>
-                            <Button onClick={handleReset} className={classes.button}>
-                                Reset
-                            </Button>
                             <Button
                                 variant="contained"
                                 color="primary"

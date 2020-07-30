@@ -1,3 +1,3 @@
-import CustomizedSteppers from "./Stepper";
+import StepsAnswer from "./Stepper";
 
-export default CustomizedSteppers;
+export default StepsAnswer;
