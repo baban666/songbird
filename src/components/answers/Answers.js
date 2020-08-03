@@ -14,14 +14,20 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-export default function SelectedListItem({gameData, question, checkAnswer, errors, disabledItems}) {
+export default function SelectedListItem({gameData, question, checkAnswer, errors, disabledItems, disabledNext, showDescription}) {
     const classes = useStyles();
     const [selectedIndex, setSelectedIndex] = React.useState(null);
 
     const handleListItemClick = (event, index) => {
         const {id} = question
-        checkAnswer(id, index)
-        setSelectedIndex(index);
+        if (disabledNext) {
+            checkAnswer(id, index);
+            setSelectedIndex(index);
+        }else {
+            showDescription(id, index)
+            setSelectedIndex(index);
+        }
+
     };
 
     const isError = (errors, index) => {

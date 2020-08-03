@@ -2,87 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8b307afc-1aed-43e4-a578-b62836847518" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/game-data/audio/Argetina.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/game-data/audio/Australia.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/game-data/audio/Belaruss.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/game-data/audio/Brazil.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/game-data/audio/Cameroon.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/game-data/audio/Canada.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/game-data/audio/China.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/game-data/audio/Colombia.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/game-data/audio/Egypt.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/game-data/audio/Ethiopia.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/game-data/audio/Fiji.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/game-data/audio/France.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/game-data/audio/Germany.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/game-data/audio/Guatemala.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/game-data/audio/India.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/game-data/audio/Italy.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/game-data/audio/Jamaica.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/game-data/audio/Japan.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/game-data/audio/KNDR.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/game-data/audio/Kenya.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/game-data/audio/Korea.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/game-data/audio/Kosta-Rika.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/game-data/audio/MarshallIslands.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/game-data/audio/Meksika.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/game-data/audio/NewZeland.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/game-data/audio/Papua.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/game-data/audio/Paraguay.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/game-data/audio/Poland.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/game-data/audio/Samoa.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/game-data/audio/Senegal.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/game-data/audio/SouthAfrica.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/game-data/audio/Spain.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/game-data/audio/Thailand.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/game-data/audio/USA.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/game-data/audio/Uruguay.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/game-data/audio/Venesuela.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/game-data/img/Argetina.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/game-data/img/Australia.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/game-data/img/Belaruss.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/game-data/img/Cameroon.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/game-data/img/Canada.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/game-data/img/China.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/game-data/img/Colombia.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/game-data/img/Egypt.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/game-data/img/Ethiopia.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/game-data/img/Fiji.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/game-data/img/France.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/game-data/img/Germany.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/game-data/img/Guatemala.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/game-data/img/India.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/game-data/img/Italy.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/game-data/img/Jamaica.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/game-data/img/Japan.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/game-data/img/KNDR.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/game-data/img/Kenya.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/game-data/img/Korea.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/game-data/img/Kosta-Rika.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/game-data/img/MarshallIslands.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/game-data/img/Meksika.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/game-data/img/NewZeland.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/game-data/img/Papua.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/game-data/img/Paraguay.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/game-data/img/Poland.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/game-data/img/Samoa.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/game-data/img/Senegal.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/game-data/img/SouthAfrica.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/game-data/img/Spain.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/game-data/img/Thailand.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/game-data/img/USA.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/game-data/img/Uruguay.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/game-data/img/Venesuela.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/game-data/img/flag.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/game-data.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/game-data/img/Brazil.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/placeholders/correct.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/placeholders/error.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/placeholders/flag.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/game-data/img/flag.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/App/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/answers/Answers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/answers/Answers.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/description/Description.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/description/Description.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header/header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/header.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/main/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/main/Main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/next-button/NextButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/next-button/NextButton.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/question/Question.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/question/Question.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/stepper/Stepper.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/stepper/Stepper.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/helpers/helpers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/helpers.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -109,21 +43,23 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/placeholders" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\PhpStorm 2019.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\OSPanel\domains\songbird\songbird\public" />
-      <recent name="C:\OSPanel\domains\songbird\songbird\src\data" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\OSPanel\domains\songbird\songbird\src\tests" />
       <recent name="C:\OSPanel\domains\songbird\songbird\src\components\App" />
       <recent name="C:\OSPanel\domains\songbird\songbird\public\images" />
       <recent name="C:\OSPanel\domains\songbird\songbird\src\components" />
       <recent name="C:\OSPanel\domains\songbird\songbird\src" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\OSPanel\domains\songbird\songbird\src\placeholders" />
+      <recent name="C:\OSPanel\domains\songbird\songbird\public\game-data\img" />
+      <recent name="C:\OSPanel\domains\songbird\songbird\public" />
+      <recent name="C:\OSPanel\domains\songbird\songbird\src\data" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -153,7 +89,8 @@
       <workItem from="1595929295528" duration="27245000" />
       <workItem from="1596020780371" duration="12332000" />
       <workItem from="1596116727621" duration="11172000" />
-      <workItem from="1596131922018" duration="12359000" />
+      <workItem from="1596131922018" duration="12960000" />
+      <workItem from="1596440963782" duration="18793000" />
     </task>
     <servers />
   </component>

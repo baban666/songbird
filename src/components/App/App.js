@@ -10,13 +10,16 @@ import helpers from "../../helpers/helpers";
 function App() {
     const [activeStep, setActiveStep] = React.useState(0);
     const [failedSteps, setFailedSteps] = React.useState(new Array(6).fill(false));
-    const [disabledItems, setDisabledItems] = React.useState(new Array(6).fill(false));
+    const [disabledItems, setDisabledItems] = React.useState(new Array(6).fill(true));
     const [errors, setErrors] = React.useState(new Array(6).fill('inherit'));
     const [desc, setDescription]  = React.useState(gameData[activeStep][2]);
     const [questionsNumber, setQuestionsNumber] = React.useState(helpers.randomNumber(5));
     const [points, setPoints] = React.useState(5);
     const [totalPoints, setTotalPoints] = React.useState(0);
     const [disabledNext, setDisabledNext] = React.useState(true);
+    const [showFlagAndName, setShowFlagAndName] = React.useState(false);
+    const [showDesc, setShowDesc] = React.useState(false);
+
     const steps = getSteps();
 
     const question = gameData[activeStep][questionsNumber]
@@ -28,11 +31,13 @@ function App() {
     const handleNext = () => {
         setActiveStep((prevActiveStep) => prevActiveStep + 1);
         setTotalPoints((prevTotalPoints) => prevTotalPoints + points);
-        setQuestionsNumber(helpers.randomNumber(5))
-        setErrors(new Array(6).fill('inherit'))
-        setFailedSteps((prevFailedSteps) => pastFailedSteps(prevFailedSteps, activeStep));
-        setDisabledNext(true)
-        setDisabledItems(new Array(6).fill(false))
+        setQuestionsNumber(helpers.randomNumber(5));
+        setErrors(new Array(6).fill('inherit'));
+        setFailedSteps((prevFailedSteps) => pastValue(prevFailedSteps, activeStep, (errors.some((item) => item === 'error'))));
+        setDisabledNext(true);
+        setDisabledItems(new Array(6).fill(true));
+        setShowFlagAndName(false)
+        setShowDesc(false)
     };
 
     const handleReset = () => {
@@ -40,52 +45,39 @@ function App() {
         setFailedSteps([]);
     };
 
-    const checkAnswer = (questionId, answerId) => {
-        console.log('errors', errors)
+    const handListenQuestion = () => {
+        setDisabledItems(() => new Array(6).fill(false));
+    };
 
+    const checkAnswer = (questionId, answerId) => {
+        setShowDesc(true)
         if (questionId === answerId) {
-            console.log('correct')
-            setDescription(gameData[activeStep][answerId])
-            setErrors((prevErrors) => pastCorrect(prevErrors, answerId));
-            setDisabledItems(new Array(6).fill(true))
-            setDisabledNext(false)
+            setDescription(gameData[activeStep][answerId]);
+            setErrors((prevErrors) => pastValue(prevErrors, answerId, 'primary'));
+            setDisabledItems(new Array(6).fill(false));
+            setDisabledNext(false);
+            setShowFlagAndName(true);
+            helpers.playCorrect();
         } else {
-            setDescription(gameData[activeStep][answerId])
-            console.log('error', points)
+            setDescription(gameData[activeStep][answerId]);
             setPoints((prevPoints) => prevPoints - 1);
-            setErrors((prevErrors) => pastError(prevErrors, answerId));
-            setDisabledItems((prevDisabled) => pastDisabled(prevDisabled, answerId))
+            setErrors((prevErrors) => pastValue(prevErrors, answerId, 'error'));
+            setDisabledItems((prevDisabled) => pastValue(prevDisabled, answerId, true));
+            helpers.playError();
         }
     };
 
-    const pastError = (arr, idx) => {
+    const pastValue = (arr, idx, value) => {
         return [
             ...arr.slice(0, idx),
-            'error',
+            value,
             ...arr.slice(idx + 1)
         ];
-    }
-    const pastCorrect = (arr, idx) => {
-        return [
-            ...arr.slice(0, idx),
-            'primary',
-            ...arr.slice(idx + 1)
-        ];
-    }
-    const pastFailedSteps = (arr, idx) => {
-        return [
-            ...arr.slice(0, idx),
-            (errors.some((item) => item === 'error')),
-            ...arr.slice(idx + 1)
-        ];
-    }
-    const pastDisabled = (arr, idx) => {
-        return [
-            ...arr.slice(0, idx),
-            true,
-            ...arr.slice(idx + 1)
-        ];
-    }
+    };
+
+    const showDescription = (questionId, answerId) => {
+        setDescription(gameData[activeStep][answerId])
+    };
 
     return (
             <div className="App">
@@ -109,6 +101,10 @@ function App() {
                   errors={errors}
                   disabledItems={disabledItems}
                   disabledNext={disabledNext}
+                  showFlagAndName={showFlagAndName}
+                  showDescription={showDescription}
+                  handListenQuestion={handListenQuestion}
+                  showDesc={showDesc}
               />
             </div>
           );

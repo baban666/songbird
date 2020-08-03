@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useRef} from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
@@ -7,6 +7,8 @@ import Typography from '@material-ui/core/Typography';
 import Container from "@material-ui/core/Container";
 import AudioPlayer from 'react-h5-audio-player';
 import 'react-h5-audio-player/lib/styles.css';
+import flag from '../../placeholders/flag.jpg'
+import helpers from "../../helpers/helpers";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -33,21 +35,31 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-export default function Question({question}) {
+export default function Question({question, showFlagAndName, handListenQuestion}) {
     const classes = useStyles();
     const {image, audio, name} = question
+    const mainFlag = showFlagAndName ? process.env.PUBLIC_URL + `/game-data/img/${image}` : flag
+    const mainName = showFlagAndName ? name : helpers.getStars(helpers.randomInteger(6, 10), '*')
+    const player = useRef();
+    const audioFunction = () => {
+        if(showFlagAndName){
+            player.current.audio.current.pause();
+        }
+
+    }
+
     return (
         <Container>
             <Card className={classes.root}>
             <CardMedia
                 className={classes.cover}
-                image={process.env.PUBLIC_URL + `/game-data/img/${image}`}
-                title="Live from space album cover"
+                image={mainFlag}
+                title={mainName}
             />
             <div className={classes.details}>
                 <CardContent className={classes.content}>
                     <Typography component="h5" variant="h5" align="left">
-                        {name}
+                        {mainName}
                     </Typography>
                 </CardContent>
                 <div className={classes.controls}>
@@ -57,7 +69,9 @@ export default function Question({question}) {
                              autoPlayAfterSrcChange={false}
                              layout="horizontal"
                              customAdditionalControls={[]}
-                             onPlay={e => console.log("onPlay")}
+                             onPlay={() => handListenQuestion()}
+                             onListen={audioFunction}
+                             ref={player}
                         />
                 </div>
             </div>

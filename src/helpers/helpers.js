@@ -1,15 +1,7 @@
-const helpers = {
+import error from '../placeholders/error.mp3';
+import correct from '../placeholders/correct.mp3';
 
-    getUniqueValue: (arr = []) => {
-        const set = new Set();
-        const uniqueArr = [];
-        arr.forEach((item) => set.add(item.toLowerCase()));
-        // eslint-disable-next-line no-restricted-syntax
-        for (const item of set) {
-            uniqueArr.push(item);
-        }
-        return uniqueArr;
-    },
+const helpers = {
 
     randomNumber: (number) => {
         return Math.floor(Math.random() * number);
@@ -20,7 +12,20 @@ const helpers = {
         return Math.floor(rand);
     },
 
-    shuffle: (array) => array.sort(() => Math.random() - 0.5),
+    getStars: (num, symbol) => {
+        return new Array(num).fill(symbol).join('')
+    },
+
+    playError: () => {
+        const audioObj = new Audio(error);
+        audioObj.play()
+    },
+
+    playCorrect: () => {
+        const audioObj = new Audio(correct);
+        audioObj.play()
+    },
+
 };
 
 export default helpers;
