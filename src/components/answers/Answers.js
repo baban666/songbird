@@ -6,6 +6,7 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import Divider from '@material-ui/core/Divider';
 import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
+import Typography from "@material-ui/core/Typography";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -40,6 +41,12 @@ export default function SelectedListItem({gameData, question, checkAnswer, error
 
     return (
         <div className={classes.root}>
+            <Typography gutterBottom variant="h4" component="h4">
+                Отметьте правильный вариант из списка
+            </Typography>
+            <Typography align="left" gutterBottom variant="h6" component="h6">
+                Варианты ответов:
+            </Typography>
             <List component="nav" aria-label="main mailbox folders">
                 {gameData.map((item) => {
                     return (

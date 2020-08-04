@@ -8,7 +8,6 @@ import Description from "../description";
 import Question from "../question";
 import NextButton from "../next-button";
 
-
 const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
@@ -27,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-export default function Main({steps, activeStep, handleReset, handleNext, question, checkAnswer, gameData, desc, errors, disabledItems, disabledNext, showFlagAndName, showDescription, handListenQuestion, showDesc}) {
+export default function Main({steps, activeStep, handleNext, question, checkAnswer, gameData, desc, errors, disabledItems, disabledNext, showFlagAndName, showDescription, handListenQuestion, showDesc}) {
     const classes = useStyles();
 
     return (
@@ -52,7 +51,6 @@ export default function Main({steps, activeStep, handleReset, handleNext, questi
                              <NextButton
                                  steps={steps}
                                  activeStep={activeStep}
-                                 handleReset={handleReset}
                                  handleNext={handleNext}
                                  disabledNext={disabledNext}
                              />

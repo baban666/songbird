@@ -42,7 +42,8 @@ export default function Question({question, showFlagAndName, handListenQuestion}
     const mainName = showFlagAndName ? name : helpers.getStars(helpers.randomInteger(6, 10), '*')
     const player = useRef();
     const audioFunction = () => {
-        if(showFlagAndName){
+        console.log('player', player)
+        if(showFlagAndName && player.current){
             player.current.audio.current.pause();
         }
 

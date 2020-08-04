@@ -12,37 +12,38 @@ function App() {
     const [failedSteps, setFailedSteps] = React.useState(new Array(6).fill(false));
     const [disabledItems, setDisabledItems] = React.useState(new Array(6).fill(true));
     const [errors, setErrors] = React.useState(new Array(6).fill('inherit'));
-    const [desc, setDescription]  = React.useState(gameData[activeStep][2]);
+    const [desc, setDescription]  = React.useState({});
     const [questionsNumber, setQuestionsNumber] = React.useState(helpers.randomNumber(5));
     const [points, setPoints] = React.useState(5);
     const [totalPoints, setTotalPoints] = React.useState(0);
     const [disabledNext, setDisabledNext] = React.useState(true);
     const [showFlagAndName, setShowFlagAndName] = React.useState(false);
     const [showDesc, setShowDesc] = React.useState(false);
+    const [showReset, setShowReset] = React.useState(false);
 
     const steps = getSteps();
 
-    const question = gameData[activeStep][questionsNumber]
+    const question = gameData[activeStep >=6 ? 0 : activeStep][questionsNumber];
 
     const isStepFailed = (step) => {
         return failedSteps[step];
     };
 
     const handleNext = () => {
-        setActiveStep((prevActiveStep) => prevActiveStep + 1);
-        setTotalPoints((prevTotalPoints) => prevTotalPoints + points);
-        setQuestionsNumber(helpers.randomNumber(5));
+        setActiveStep((prevActiveStep) => prevActiveStep >= 6 ? 0 : prevActiveStep + 1);
+        setQuestionsNumber(helpers.randomNumber(6));
         setErrors(new Array(6).fill('inherit'));
         setFailedSteps((prevFailedSteps) => pastValue(prevFailedSteps, activeStep, (errors.some((item) => item === 'error'))));
         setDisabledNext(true);
         setDisabledItems(new Array(6).fill(true));
-        setShowFlagAndName(false)
-        setShowDesc(false)
+        setShowFlagAndName(false);
+        setShowDesc(false);
+        setPoints(5);
+        resetFailedStepsAndPoint()
     };
 
     const handleReset = () => {
-        setActiveStep(0);
-        setFailedSteps([]);
+        console.log('handleReset')
     };
 
     const handListenQuestion = () => {
@@ -57,6 +58,7 @@ function App() {
             setDisabledItems(new Array(6).fill(false));
             setDisabledNext(false);
             setShowFlagAndName(true);
+            setTotalPoints((prevTotalPoints) => prevTotalPoints + points);
             helpers.playCorrect();
         } else {
             setDescription(gameData[activeStep][answerId]);
@@ -79,6 +81,15 @@ function App() {
         setDescription(gameData[activeStep][answerId])
     };
 
+    const resetFailedStepsAndPoint = () => {
+        console.log('resetFailedStepsAndPoint')
+        if (activeStep >= 5) {
+            //setFailedSteps( () => new Array(6).fill(false));
+            //setTotalPoints(0);
+            setShowReset(true)
+        }
+
+    };
     return (
             <div className="App">
               <header>
@@ -88,24 +99,31 @@ function App() {
                       isStepFailed={isStepFailed}
                       activeStep={activeStep}
                   />
+                  {/*{showReset ? <h1>hi</h1> : <StepsAnswer*/}
+                  {/*    steps={steps}*/}
+                  {/*    isStepFailed={isStepFailed}*/}
+                  {/*    activeStep={activeStep}*/}
+                  {/*/>}*/}
               </header>
-              <Main
-                  steps={steps}
-                  activeStep={activeStep}
-                  handleReset={handleReset}
-                  handleNext={handleNext}
-                  question={question}
-                  gameData={gameData[activeStep]}
-                  checkAnswer={checkAnswer}
-                  desc={desc}
-                  errors={errors}
-                  disabledItems={disabledItems}
-                  disabledNext={disabledNext}
-                  showFlagAndName={showFlagAndName}
-                  showDescription={showDescription}
-                  handListenQuestion={handListenQuestion}
-                  showDesc={showDesc}
-              />
+                {showReset ? <h1>hi</h1> : <Main
+                    steps={steps}
+                    activeStep={activeStep}
+                    handleNext={handleNext}
+                    question={question}
+                    gameData={gameData[activeStep]}
+                    checkAnswer={checkAnswer}
+                    desc={desc}
+                    errors={errors}
+                    disabledItems={disabledItems}
+                    disabledNext={disabledNext}
+                    showFlagAndName={showFlagAndName}
+                    showDescription={showDescription}
+                    handListenQuestion={handListenQuestion}
+                    showDesc={showDesc}
+                    handleReset={handleReset}
+                    showReset={showReset}
+                />}
+
             </div>
           );
 }

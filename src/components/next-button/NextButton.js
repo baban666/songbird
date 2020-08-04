@@ -29,37 +29,21 @@ function getStepContent(step) {
     }
 }
 
-export default function NextButton({steps, activeStep, handleReset, handleNext, disabledNext}) {
+export default function NextButton({steps, activeStep, handleNext, disabledNext}) {
+    console.log('activeStep === steps.length', activeStep, steps.length - 1)
     const classes = useStyles();
     return (
         <div className={classes.root}>
-            <div>
-                {activeStep === steps.length ? (
-                    <div>
-                        <Typography className={classes.instructions}>
-                            All steps completed - you&apos;re finished
-                        </Typography>
-                        <Button onClick={handleReset} className={classes.button}>
-                            Reset
-                        </Button>
-                    </div>
-                ) : (
-                    <div>
-                        <Typography className={classes.instructions}>{getStepContent(activeStep)}</Typography>
-                        <div>
-                            <Button
-                                variant="contained"
-                                color="primary"
-                                onClick={handleNext}
-                                className={classes.button}
-                                disabled={disabledNext}
-                            >
-                                {activeStep === steps.length - 1 ? 'Finish' : 'Next'}
-                            </Button>
-                        </div>
-                    </div>
-                )}
-            </div>
+            <Typography className={classes.instructions}>{getStepContent(activeStep)}</Typography>
+            <Button
+                variant="contained"
+                color="primary"
+                onClick={handleNext}
+                className={classes.button}
+                disabled={disabledNext}
+            >
+                {activeStep === steps.length - 1 ? 'Finish' : 'Next'}
+            </Button>
         </div>
     );
 }
