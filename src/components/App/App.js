@@ -6,6 +6,7 @@ import Main from "../main";
 import getSteps from "../../data/steps";
 import gameData from "../../data/game-data";
 import helpers from "../../helpers/helpers";
+import FinalMessage from "../final-message";
 
 function App() {
     const [activeStep, setActiveStep] = React.useState(0);
@@ -99,13 +100,8 @@ function App() {
                       isStepFailed={isStepFailed}
                       activeStep={activeStep}
                   />
-                  {/*{showReset ? <h1>hi</h1> : <StepsAnswer*/}
-                  {/*    steps={steps}*/}
-                  {/*    isStepFailed={isStepFailed}*/}
-                  {/*    activeStep={activeStep}*/}
-                  {/*/>}*/}
               </header>
-                {showReset ? <h1>hi</h1> : <Main
+                <FinalMessage handleReset={handleReset} failedSteps={failedSteps} totalPoints={totalPoints} steps={steps} />  <Main
                     steps={steps}
                     activeStep={activeStep}
                     handleNext={handleNext}
@@ -120,9 +116,8 @@ function App() {
                     showDescription={showDescription}
                     handListenQuestion={handListenQuestion}
                     showDesc={showDesc}
-                    handleReset={handleReset}
                     showReset={showReset}
-                />}
+                />
 
             </div>
           );

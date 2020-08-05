@@ -2,18 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8b307afc-1aed-43e4-a578-b62836847518" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/final-message/final-message.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/final-message/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/logo192.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/App/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/answers/Answers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/answers/Answers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/hoc/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/main/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/main/Main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/error-boundary/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/final-message/final-message.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/next-button/NextButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/next-button/NextButton.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/question/Question.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/question/Question.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/skeleton/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/FlickrService.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/XenoService.js" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,6 +25,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
+        <option value="Sass File" />
       </list>
     </option>
   </component>
@@ -41,6 +37,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/placeholders" />
+    <property name="list.type.of.created.stylesheet" value="Sass" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\PhpStorm 2019.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
@@ -90,7 +87,10 @@
       <workItem from="1596440963782" duration="19482000" />
       <workItem from="1596482271881" duration="42000" />
       <workItem from="1596482382967" duration="118000" />
-      <workItem from="1596526604230" duration="18871000" />
+      <workItem from="1596526604230" duration="19471000" />
+      <workItem from="1596639652024" duration="4802000" />
+      <workItem from="1596646285265" duration="1451000" />
+      <workItem from="1596648832608" duration="7416000" />
     </task>
     <servers />
   </component>

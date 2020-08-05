@@ -30,7 +30,6 @@ function getStepContent(step) {
 }
 
 export default function NextButton({steps, activeStep, handleNext, disabledNext}) {
-    console.log('activeStep === steps.length', activeStep, steps.length - 1)
     const classes = useStyles();
     return (
         <div className={classes.root}>
