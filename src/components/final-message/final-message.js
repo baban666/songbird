@@ -40,7 +40,6 @@ const useStyles = makeStyles((theme) => ({
 export default function FinalMessage({handleReset, failedSteps, totalPoints, steps}) {
     const classes = useStyles();
     const errors = steps.filter( (item, i) => failedSteps[i])
-    console.log('errors', errors.join(', '))
     return (
         <div className={classes.root}>
             <Grid className={classes.paper} container spacing={2}>
@@ -49,9 +48,12 @@ export default function FinalMessage({handleReset, failedSteps, totalPoints, ste
                         <Alert className={classes.alert} variant="filled" severity="info">
                             Вы прошли викторину и набрали {totalPoints} из 30 возможных баллов
                         </Alert>
-                        {false ? (<CardActionArea>
+                        {totalPoints === 30 ? (<CardActionArea>
                             <div className="video-responsive">
-                                <iframe width="560" height="315" src="https://www.youtube.com/embed/IqaRoshKGmU"
+                                <iframe title="RB"
+                                        width="560"
+                                        height="315"
+                                        src="https://www.youtube.com/embed/IqaRoshKGmU"
                                         frameBorder="0"
                                         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                                         allowFullScreen></iframe>
@@ -83,7 +85,7 @@ export default function FinalMessage({handleReset, failedSteps, totalPoints, ste
                             >
                                 Новая игра
                             </Button>
-                            {false ? ( <Button size="small" color="primary" href="https://www.youtube.com/watch?v=IqaRoshKGmU">
+                            {totalPoints === 30 ? ( <Button size="small" color="primary" href="https://www.youtube.com/watch?v=IqaRoshKGmU">
                                 Перейти на YouTube
                             </Button>) : null}
 

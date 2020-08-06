@@ -30,8 +30,12 @@ export default function Description({desc, showDesc}) {
         <Card className={classes.root}>
             {!showDesc ? (<><CardActionArea>
                 <CardContent>
-                    <Alert className={classes.alert} variant="filled" severity="info">Нажмите 'Play' и воспроизведите вопрос.</Alert>
-                    <Alert className={classes.alert} variant="filled" severity="info">Затем выберите правильный ответ из списка.</Alert>
+                    <Alert className={classes.alert} variant="filled" severity="info">
+                        Нажмите 'Play' и воспроизведите вопрос.
+                    </Alert>
+                    <Alert className={classes.alert} variant="filled" severity="info">
+                        Затем выберите правильный ответ из списка.
+                    </Alert>
                 </CardContent>
             </CardActionArea>
                 </>) : (<><CardActionArea>
@@ -56,10 +60,8 @@ export default function Description({desc, showDesc}) {
                 autoPlayAfterSrcChange={false}
                 layout="horizontal"
                 customAdditionalControls={[]}
-                onPlay={e => console.log("onPlay")}
                 />
                 </CardActions> </>)}
-
         </Card>
     );
 }

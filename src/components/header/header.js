@@ -2,7 +2,6 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 import Badge from '@material-ui/core/Badge';
 import Container from "@material-ui/core/Container";
@@ -16,16 +15,6 @@ const useStyles = makeStyles((theme) => ({
         display: 'block',
         [theme.breakpoints.up('sm')]: {
             display: 'block',
-        },
-    },
-    inputInput: {
-        padding: theme.spacing(1, 1, 1, 0),
-        // vertical padding + font size from searchIcon
-        paddingLeft: `calc(1em + ${theme.spacing(4)}px)`,
-        transition: theme.transitions.create('width'),
-        width: '100%',
-        [theme.breakpoints.up('md')]: {
-            width: '20ch',
         },
     },
     sectionDesktop: {
@@ -49,11 +38,9 @@ export default function Header({totalPoints}) {
                         </Typography>
                         <div className={classes.grow} />
                         <div className={classes.sectionDesktop}>
-                            <IconButton aria-label="show point of game" color="inherit">
-                                <Badge badgeContent={totalPoints.toString()} color="secondary">
-                                    <EmojiEventsIcon />
-                                </Badge>
-                            </IconButton>
+                            <Badge badgeContent={totalPoints.toString()} color="secondary">
+                                <EmojiEventsIcon />
+                            </Badge>
                         </div>
                     </Toolbar>
                 </Container>

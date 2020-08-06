@@ -13,7 +13,7 @@ const helpers = {
     },
 
     getStars: (num, symbol) => {
-        return new Array(num).fill(symbol).join('')
+        return new Array(num).fill(symbol).join('');
     },
 
     playError: () => {

@@ -2,13 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8b307afc-1aed-43e4-a578-b62836847518" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/final-message/final-message.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/final-message/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/App/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/error-boundary/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/final-message/final-message.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/answers/Answers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/answers/Answers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/description/Description.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/description/Description.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/final-message/final-message.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/final-message/final-message.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header/header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/main/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/main/Main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/next-button/NextButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/next-button/NextButton.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/question/Question.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/question/Question.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/helpers/helpers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/helpers.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -91,6 +94,7 @@
       <workItem from="1596639652024" duration="4802000" />
       <workItem from="1596646285265" duration="1451000" />
       <workItem from="1596648832608" duration="7416000" />
+      <workItem from="1596701944639" duration="5818000" />
     </task>
     <servers />
   </component>

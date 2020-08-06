@@ -26,7 +26,20 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-export default function Main({steps, activeStep, handleNext, question, checkAnswer, gameData, desc, errors, disabledItems, disabledNext, showFlagAndName, showDescription, handListenQuestion, showDesc}) {
+export default function Main({steps,
+                                 activeStep,
+                                 handleNext,
+                                 question,
+                                 checkAnswer,
+                                 gameData,
+                                 desc,
+                                 errors,
+                                 disabledItems,
+                                 disabledNext,
+                                 showFlagAndName,
+                                 showDescription,
+                                 handListenQuestion,
+                                 showDesc}) {
     const classes = useStyles();
 
     return (
@@ -34,13 +47,23 @@ export default function Main({steps, activeStep, handleNext, question, checkAnsw
             <Container m={300}>
                 <Grid item xs={12}>
                     <Paper className={classes.topPaper}>
-                        <Question question={question} showFlagAndName={showFlagAndName} handListenQuestion={handListenQuestion}/>
+                        <Question
+                            question={question}
+                            showFlagAndName={showFlagAndName}
+                            handListenQuestion={handListenQuestion}/>
                     </Paper>
                 </Grid>
                 <Grid container spacing={5}>
                     <Grid item xs={6}>
                         <Paper className={classes.paper}>
-                            <Answers question={question} checkAnswer={checkAnswer} gameData={gameData} errors={errors} disabledItems={disabledItems} disabledNext={disabledNext} showDescription={showDescription}/>
+                            <Answers
+                                question={question}
+                                checkAnswer={checkAnswer}
+                                gameData={gameData}
+                                errors={errors}
+                                disabledItems={disabledItems}
+                                disabledNext={disabledNext}
+                                showDescription={showDescription}/>
                         </Paper>
                     </Grid>
                     <Grid item xs={6}>

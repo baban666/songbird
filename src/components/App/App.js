@@ -23,7 +23,6 @@ function App() {
     const [showReset, setShowReset] = React.useState(false);
 
     const steps = getSteps();
-
     const question = gameData[activeStep >=6 ? 0 : activeStep][questionsNumber];
 
     const isStepFailed = (step) => {
@@ -44,7 +43,17 @@ function App() {
     };
 
     const handleReset = () => {
-        console.log('handleReset')
+        setShowReset(false);
+        setActiveStep((prevActiveStep) => prevActiveStep >= 6 ? 0 : prevActiveStep + 1);
+        setFailedSteps( () => new Array(6).fill(false));
+        setTotalPoints(0);
+        setQuestionsNumber(helpers.randomNumber(6));
+        setErrors(new Array(6).fill('inherit'));
+        setDisabledNext(true);
+        setDisabledItems(new Array(6).fill(true));
+        setShowFlagAndName(false);
+        setShowDesc(false);
+        setPoints(5);
     };
 
     const handListenQuestion = () => {
@@ -52,7 +61,7 @@ function App() {
     };
 
     const checkAnswer = (questionId, answerId) => {
-        setShowDesc(true)
+        setShowDesc(true);
         if (questionId === answerId) {
             setDescription(gameData[activeStep][answerId]);
             setErrors((prevErrors) => pastValue(prevErrors, answerId, 'primary'));
@@ -83,13 +92,9 @@ function App() {
     };
 
     const resetFailedStepsAndPoint = () => {
-        console.log('resetFailedStepsAndPoint')
         if (activeStep >= 5) {
-            //setFailedSteps( () => new Array(6).fill(false));
-            //setTotalPoints(0);
             setShowReset(true)
         }
-
     };
     return (
             <div className="App">
@@ -101,24 +106,30 @@ function App() {
                       activeStep={activeStep}
                   />
               </header>
-                <FinalMessage handleReset={handleReset} failedSteps={failedSteps} totalPoints={totalPoints} steps={steps} />  <Main
-                    steps={steps}
-                    activeStep={activeStep}
-                    handleNext={handleNext}
-                    question={question}
-                    gameData={gameData[activeStep]}
-                    checkAnswer={checkAnswer}
-                    desc={desc}
-                    errors={errors}
-                    disabledItems={disabledItems}
-                    disabledNext={disabledNext}
-                    showFlagAndName={showFlagAndName}
-                    showDescription={showDescription}
-                    handListenQuestion={handListenQuestion}
-                    showDesc={showDesc}
-                    showReset={showReset}
-                />
-
+                {showReset
+                    ? (<FinalMessage
+                        handleReset={handleReset}
+                        failedSteps={failedSteps}
+                        totalPoints={totalPoints}
+                        steps={steps} /> )
+                    : (<Main
+                        steps={steps}
+                        activeStep={activeStep}
+                        handleNext={handleNext}
+                        question={question}
+                        gameData={gameData[activeStep]}
+                        checkAnswer={checkAnswer}
+                        desc={desc}
+                        errors={errors}
+                        disabledItems={disabledItems}
+                        disabledNext={disabledNext}
+                        showFlagAndName={showFlagAndName}
+                        showDescription={showDescription}
+                        handListenQuestion={handListenQuestion}
+                        showDesc={showDesc}
+                        showReset={showReset}
+                    />
+                ) }
             </div>
           );
 }

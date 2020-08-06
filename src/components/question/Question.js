@@ -37,16 +37,16 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Question({question, showFlagAndName, handListenQuestion}) {
     const classes = useStyles();
-    const {image, audio, name} = question
-    const mainFlag = showFlagAndName ? process.env.PUBLIC_URL + `/game-data/img/${image}` : flag
-    const mainName = showFlagAndName ? name : helpers.getStars(helpers.randomInteger(6, 10), '*')
+    const {image, audio, name} = question;
+    const mainFlag = showFlagAndName ? process.env.PUBLIC_URL + `/game-data/img/${image}` : flag;
+    const mainName = showFlagAndName ? name : helpers.getStars(helpers.randomInteger(6, 10), '*');
     const player = useRef();
     const audioFunction = () => {
         if(showFlagAndName && player.current){
             player.current.audio.current.pause();
         }
     };
-
+    console.log('Правильный ответ:', name);
     return (
         <Container>
             <Card className={classes.root}>

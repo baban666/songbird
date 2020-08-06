@@ -19,13 +19,19 @@ const useStyles = makeStyles((theme) => ({
 function getStepContent(step) {
     switch (step) {
         case 0:
-            return 'Select campaign settings...';
+            return 'Начнем с простого, как у вас со знанием Северной Америки?';
         case 1:
-            return 'What is an ad group anyways?';
+            return 'Вопрос для эрудита - Южная Америка';
         case 2:
-            return 'This is the bit I really care about!';
+            return 'Вопрос по Европе - проще некуда!';
+        case 3:
+            return 'Вопрос по Азии, надеемся будет просто';
+        case 4:
+            return 'Соберись! Скоро финиш и вопрос по Африке';
+        case 5:
+            return 'И так, последний вопрос по Австралии и Океании';
         default:
-            return 'Unknown step';
+            return 'Просто вопрос';
     }
 }
 
@@ -41,7 +47,7 @@ export default function NextButton({steps, activeStep, handleNext, disabledNext}
                 className={classes.button}
                 disabled={disabledNext}
             >
-                {activeStep === steps.length - 1 ? 'Finish' : 'Next'}
+                {activeStep === steps.length - 1 ? 'Финиш' : 'Далее'}
             </Button>
         </div>
     );

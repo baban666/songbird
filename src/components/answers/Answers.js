@@ -15,17 +15,23 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-export default function SelectedListItem({gameData, question, checkAnswer, errors, disabledItems, disabledNext, showDescription}) {
+export default function SelectedListItem({gameData,
+                                             question,
+                                             checkAnswer,
+                                             errors,
+                                             disabledItems,
+                                             disabledNext,
+                                             showDescription}) {
     const classes = useStyles();
     const [selectedIndex, setSelectedIndex] = React.useState(null);
 
     const handleListItemClick = (event, index) => {
-        const {id} = question
+        const {id} = question;
         if (disabledNext) {
             checkAnswer(id, index);
             setSelectedIndex(index);
         }else {
-            showDescription(id, index)
+            showDescription(id, index);
             setSelectedIndex(index);
         }
 
@@ -44,7 +50,7 @@ export default function SelectedListItem({gameData, question, checkAnswer, error
             <Typography gutterBottom variant="h4" component="h4">
                 Отметьте правильный вариант из списка
             </Typography>
-            <Typography align="left" gutterBottom variant="h6" component="h6">
+            <Typography align="left" gutterBottom variant="h5" component="h6">
                 Варианты ответов:
             </Typography>
             <List component="nav" aria-label="main mailbox folders">
