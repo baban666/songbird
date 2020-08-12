@@ -7,22 +7,35 @@ import Answers from "../answers/Answers";
 import Description from "../description";
 import Question from "../question";
 import NextButton from "../next-button";
+import {Box} from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
-        marginTop: '30px',
+        marginTop: theme.spacing(1),
     },
     paper: {
         padding: theme.spacing(2),
         textAlign: 'center',
         color: theme.palette.text.secondary,
+        boxShadow: 'unset',
     },
-    topPaper: {
-        padding: theme.spacing(2),
+    paperNext: {
+        padding: theme.spacing(0),
         textAlign: 'center',
         color: theme.palette.text.secondary,
-        marginBottom: '40px',
+        boxShadow: 'unset',
+    },
+    grid: {
+        padding: theme.spacing(0),
+        width: '100%',
+    },
+    topPaper: {
+        padding: theme.spacing(1),
+        textAlign: 'center',
+        color: theme.palette.text.secondary,
+        marginBottom: '10px',
+        boxShadow: 'unset',
     },
 }));
 
@@ -53,8 +66,9 @@ export default function Main({steps,
                             handListenQuestion={handListenQuestion}/>
                     </Paper>
                 </Grid>
-                <Grid container spacing={5}>
-                    <Grid item xs={6}>
+                <Grid container spacing={3}>
+                    <Grid  className={classes.grid} item md={12} lg={6}>
+                        <Box boxShadow={3}>
                         <Paper className={classes.paper}>
                             <Answers
                                 question={question}
@@ -65,12 +79,13 @@ export default function Main({steps,
                                 disabledNext={disabledNext}
                                 showDescription={showDescription}/>
                         </Paper>
+                        </Box>
                     </Grid>
-                    <Grid item xs={6}>
+                    <Grid item md={12} lg={6}>
                          <Description desc={desc} showDesc={showDesc} />
                     </Grid>
-                    <Grid item xs={12}>
-                        <Paper className={classes.paper}>
+                    <Grid className={classes.grid} item xs={12}>
+                        <Paper className={classes.paperNext}>
                              <NextButton
                                  steps={steps}
                                  activeStep={activeStep}

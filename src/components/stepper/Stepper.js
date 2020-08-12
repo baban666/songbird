@@ -8,27 +8,56 @@ import Typography from "@material-ui/core/Typography";
 const useStyles = makeStyles((theme) => ({
     root: {
         width: '100%',
-        marginTop: theme.spacing(2),
+        marginTop: theme.spacing(1),
+    },
+    title: {
+        marginBottom: theme.spacing(0),
+    },
+    steps: {
+        paddingBottom: theme.spacing(0),
+        paddingTop: theme.spacing(1),
     },
     button: {
         marginRight: theme.spacing(1),
-    },
-    instructions: {
-        marginTop: theme.spacing(1),
-        marginBottom: theme.spacing(1),
     },
 }));
 
 
 export default function StepsAnswer({steps, isStepFailed, activeStep}) {
     const classes = useStyles();
+    const [isAlternative, setAlternative] = React.useState(true);
+    const [isVertical, setVertical] = React.useState(false);
+
+    window.addEventListener('resize', (e) => {
+        const {innerWidth} = e.currentTarget;
+        if(innerWidth < 638){
+            setAlternative(false);
+            setVertical(true);
+        } else {
+            setAlternative(true);
+            setVertical(false);
+        }
+    });
+
+    window.addEventListener('load', () => {
+        if(window.innerWidth < 638){
+            setAlternative(false);
+            setVertical(true);
+        } else {
+            setAlternative(true);
+            setVertical(false);
+        }
+    });
 
     return (
         <div className={classes.root}>
-            <Typography variant="h3" gutterBottom>
+            <Typography  className={classes.title} variant="h6" gutterBottom>
                 Угадайте гимн страны по мелодии
             </Typography>
-            <Stepper alternativeLabel activeStep={activeStep}>
+            <Stepper className={classes.steps}
+                     alternativeLabel={isAlternative}
+                     activeStep={activeStep}
+                     orientation={isVertical ? "vertical" : "horizontal"}>
                 {steps.map((label, index) => {
                     const stepProps = {};
                     const labelProps = {};

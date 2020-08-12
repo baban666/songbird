@@ -6,6 +6,7 @@ import Typography from '@material-ui/core/Typography';
 const useStyles = makeStyles((theme) => ({
     root: {
         width: '100%',
+        padding: 0,
     },
     button: {
         marginRight: theme.spacing(1),
@@ -45,8 +46,7 @@ export default function NextButton({steps, activeStep, handleNext, disabledNext}
                 color="primary"
                 onClick={handleNext}
                 className={classes.button}
-                disabled={disabledNext}
-            >
+                disabled={disabledNext}>
                 {activeStep === steps.length - 1 ? 'Финиш' : 'Далее'}
             </Button>
         </div>

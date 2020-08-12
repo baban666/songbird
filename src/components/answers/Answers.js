@@ -13,6 +13,9 @@ const useStyles = makeStyles((theme) => ({
         width: '100%',
         backgroundColor: theme.palette.background.paper,
     },
+    list: {
+        padding: 5,
+    },
 }));
 
 export default function SelectedListItem({gameData,
@@ -47,10 +50,7 @@ export default function SelectedListItem({gameData,
 
     return (
         <div className={classes.root}>
-            <Typography gutterBottom variant="h4" component="h4">
-                Отметьте правильный вариант из списка
-            </Typography>
-            <Typography align="left" gutterBottom variant="h5" component="h6">
+            <Typography align="left" gutterBottom variant="h6" component="h6">
                 Варианты ответов:
             </Typography>
             <List component="nav" aria-label="main mailbox folders">
@@ -58,6 +58,7 @@ export default function SelectedListItem({gameData,
                     return (
                         <div key={item.id}>
                         <ListItem
+                            className={classes.list}
                             button
                             selected={selectedIndex === item.id}
                             disabled={isDisabled(disabledItems, item.id)}

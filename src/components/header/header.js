@@ -34,7 +34,7 @@ export default function Header({totalPoints}) {
                 <Container>
                     <Toolbar>
                         <Typography className={classes.title} variant="h6" noWrap>
-                            Songbird
+                            JustSong
                         </Typography>
                         <div className={classes.grow} />
                         <div className={classes.sectionDesktop}>

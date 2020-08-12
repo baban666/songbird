@@ -56,8 +56,9 @@ function App() {
         setPoints(5);
     };
 
-    const handListenQuestion = () => {
+    const handListenQuestion = (name) => {
         setDisabledItems(() => new Array(6).fill(false));
+        console.log('Правильный ответ:', name);
     };
 
     const checkAnswer = (questionId, answerId) => {

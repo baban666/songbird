@@ -14,6 +14,9 @@ const useStyles = makeStyles((theme) => ({
     root: {
         display: 'flex',
         boxShadow: 'none',
+        [theme.breakpoints.down('xs')]: {
+            flexDirection: 'column',
+        },
     },
     details: {
         display: 'flex',
@@ -22,6 +25,9 @@ const useStyles = makeStyles((theme) => ({
     },
     content: {
         flex: '1 0 auto',
+    },
+    container: {
+        marginTop: theme.spacing(1),
     },
     cover: {
         width: 300,
@@ -46,9 +52,30 @@ export default function Question({question, showFlagAndName, handListenQuestion}
             player.current.audio.current.pause();
         }
     };
-    console.log('Правильный ответ:', name);
+
+    const [vertical, toggleVertical] = React.useState('horizontal');
+
+
+    window.addEventListener('resize', (e) => {
+        const {innerWidth} = e.currentTarget;
+        if(innerWidth < 638){
+            toggleVertical('vertical');
+        } else {
+            toggleVertical('horizontal');
+        }
+    });
+
+    window.addEventListener('load', () => {
+        if(window.innerWidth < 638){
+            toggleVertical('vertical');
+        } else {
+            toggleVertical('horizontal');
+        }
+    });
+
+
     return (
-        <Container>
+        <Container  className={classes.container}>
             <Card className={classes.root}>
             <CardMedia
                 className={classes.cover}
@@ -66,9 +93,9 @@ export default function Question({question, showFlagAndName, handListenQuestion}
                              src={process.env.PUBLIC_URL + `/game-data/audio/${audio}`}
                              showJumpControls={false}
                              autoPlayAfterSrcChange={false}
-                             layout="horizontal"
+                             layout={vertical}
                              customAdditionalControls={[]}
-                             onPlay={() => handListenQuestion()}
+                             onPlay={() => handListenQuestion(name)}
                              onListen={audioFunction}
                              ref={player}
                         />
