@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="8b307afc-1aed-43e4-a578-b62836847518" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/App/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/App/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/answers/Answers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/answers/Answers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header/header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/main/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/main/Main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/next-button/NextButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/next-button/NextButton.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/question/Question.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/question/Question.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/stepper/Stepper.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/stepper/Stepper.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/game-data.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/game-data.js" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution>
+      <executable />
+    </execution>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="Sass File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1fHZ98R81aMEKcFc30qKDVECV9d" />
+  <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="Sass" />
+    <property name="nodejs_package_manager_path" value="yarn" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\PhpStorm 2019.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\OSPanel\domains\songbird\songbird\src\tests" />
+      <recent name="C:\OSPanel\domains\songbird\songbird\src\components\App" />
+      <recent name="C:\OSPanel\domains\songbird\songbird\public\images" />
+      <recent name="C:\OSPanel\domains\songbird\songbird\src\components" />
+      <recent name="C:\OSPanel\domains\songbird\songbird\src" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\OSPanel\domains\songbird\songbird\src\placeholders" />
+      <recent name="C:\OSPanel\domains\songbird\songbird\public\game-data\img" />
+      <recent name="C:\OSPanel\domains\songbird\songbird\public" />
+      <recent name="C:\OSPanel\domains\songbird\songbird\src\data" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8b307afc-1aed-43e4-a578-b62836847518" name="Default Changelist" comment="" />
+      <created>1595876823840</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1595876823840</updated>
+      <workItem from="1595876828722" duration="88000" />
+      <workItem from="1595877914165" duration="4382000" />
+      <workItem from="1595929295528" duration="27245000" />
+      <workItem from="1596020780371" duration="12332000" />
+      <workItem from="1596116727621" duration="11172000" />
+      <workItem from="1596131922018" duration="12960000" />
+      <workItem from="1596440963782" duration="19482000" />
+      <workItem from="1596482271881" duration="42000" />
+      <workItem from="1596482382967" duration="118000" />
+      <workItem from="1596526604230" duration="19471000" />
+      <workItem from="1596639652024" duration="4802000" />
+      <workItem from="1596646285265" duration="1451000" />
+      <workItem from="1596648832608" duration="7416000" />
+      <workItem from="1596701944639" duration="7012000" />
+      <workItem from="1596998734604" duration="9165000" />
+      <workItem from="1597045753853" duration="8843000" />
+      <workItem from="1597215388211" duration="683000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
