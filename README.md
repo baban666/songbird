@@ -1,68 +1,31 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+1. Task:
+   https://github.com/rolling-scopes-school/tasks/blob/master/tasks/songbird.md
+2. App screenshot:
+   https://yadi.sk/i/fQ8-NcI88VU5tw
+3. Deploy:  
+   https://baban666-songbird.netlify.app/
+4. Done 12.08.20 (deadline 30.08.20)
+5. Score: 240 / 240
 
-## Available Scripts
+**Не выполненные/не засчитанные пункты:**
+1) использование заранее подготовленных данных из репозитория с заданием
 
-In the project directory, you can run:
-
-### `yarn start`
-
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+**Выполненные пункты:**
+1) минимальная ширина, при которой приложение отображается корректно – 320 рх
+2) внешний вид приложения полностью повторяет демо или является его улучшенной версией
+3) есть аудиоплеер
+4) аудиоплеер кастомный, такой же, как в демо приложения, может отличаться по цвету
+5) у кастомного аудиоплеера есть регулятор громкости звука
+6) создание и использование собственной коллекции данных, либо использование подходящего API
+7) правильное отображение текущего счета игры
+8) индикация текущего вопроса (подсветка категории в header)
+9) подстановка дефолтного изображения и замена названия птицы на символы (***), пока игрок не выберет правильный ответ
+10) при выборе правильного ответа появляется изображение и название птицы
+11) цветовая индикация правильного/неправильного ответа в виде индикаторов разного цвета рядом с названием птицы
+12) при клике по названию птицы в блоке с описанием птицы отображается информацию о ней
+13) пока игрок не кликнул по названию птицы из списка, в блоке выводится короткий текст с предложением послушать плеер и выбрать название птицы, чей голос прозвучал
+14) при клике по названию птицы из списка, в блоке с описанием птицы появляется информация о ней. Информация о птице включает: изображение, название (на русском и на латыни), аудиоплеер с записью голоса, дополнительное описание птицы
+15) пока не выбран правильный ответ, кнопка не активна, нет возможности перейти к следующему заданию. Активное и неактивное состояние кнопки визуально отличаются
+16) после правильного ответа на последний вопрос, клик по кнопке скрывает блок с вопросом, блок с вариантами ответов и блок с описанием птицы. Появляется сообщение с поздравлением об окончании игры:. Сообщение содержит количество набранных баллов из максимально возможных и кнопку с предложение сыграть ещё раз
+17) звуковая индикация правильного/неправильного ответа. При выборе правильного или неправильного ответа издаются разные звуковые сигналы. При выборе неправильного ответа проигрывание аудиоплеера не должно останавливаться. При выборе правильно ответа проигрывание аудиоплеера должно остановиться
+18) Поздравление с абсолютной победой, если набрано максимально возможное количество баллов
